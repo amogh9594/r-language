@@ -1,0 +1,27 @@
+---
+title: "markdown"
+author: "Amogh Kawle"
+date: "22/11/2021"
+output: html_document
+---
+This is my first Markdown document.
+
+Let's load some data.
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+Here's pairs plot of the data.
+
+```{r}
+pairs(airquality)
+```
+Here's a regression model of ozone on some predication.
+
+```{r}
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
